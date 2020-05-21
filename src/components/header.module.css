@@ -1,0 +1,55 @@
+@import "../assets/colors.css";
+
+header nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  background-color: var(--main-strong-color);
+  margin: 0;
+  padding: 15px;
+}
+a {
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--main-body-color);
+  cursor: pointer;
+}
+li {
+  margin-top: 10px;
+  list-style: none;
+}
+
+li:nth-child(odd) {
+  float: right;
+  grid-row: auto;
+  grid-column: 1 / 2;
+}
+li:nth-child(even) {
+  float: left;
+  grid-row: auto;
+  grid-column: 2 / 3;
+}
+
+@media screen and (min-width: 500px) {
+  header nav ul {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+  }
+  li:nth-child(odd),
+  li:nth-child(even) {
+    float: none;
+    grid-row: 1 / 2;
+    grid-column: auto;
+  }
+}
+@media screen and (min-width: 700px) {
+  header nav ul {
+    display: inline-block;
+    width: 100%;
+  }
+  li {
+    display: inline-block;
+    width: auto;
+    margin-left: 15px;
+  }
+}

@@ -1,0 +1,9 @@
+type Expense {
+  topic: String!
+  value: Float!
+  type: String!
+  date: Date!
+}
+type Query {
+  allExpenses: [Expense!]!
+}

@@ -1,0 +1,43 @@
+@import "../../assets/sizes.css";
+
+.main-title {
+  border: 1px solid var(--main-success-color);
+  width: 15%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: var(--main-success-color);
+  margin: 0 auto;
+}
+.main-title h1 {
+  display: none;
+}
+svg {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .main-title {
+    width: 70%;
+    font-size: 1rem;
+  }
+  .main-title h1 {
+    display: inline;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main-title {
+    width: 50%;
+    font-size: 1.2rem;
+  }
+  svg {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  h1 {
+    margin-left: 20px;
+  }
+}
