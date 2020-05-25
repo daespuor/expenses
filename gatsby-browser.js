@@ -5,3 +5,5 @@
  */
 
 // You can delete this file if you're not using it
+import "react-datepicker/dist/react-datepicker.css"
+import "react-toastify/dist/ReactToastify.css"

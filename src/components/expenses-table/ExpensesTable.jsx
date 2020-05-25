@@ -4,7 +4,13 @@ import styles from "./expenses-table.module.css"
 import SearchBox from "../atoms/SearchBox"
 import ExpensesForm from "./ExpensesForm"
 
-const ExpensesTable = ({ data, toggleShowForm, activeForm }) => (
+const ExpensesTable = ({
+  data,
+  toggleShowForm,
+  activeForm,
+  handleInputUpdate,
+  handleSubmit,
+}) => (
   <div className={styles.expensesTable}>
     <div className={styles.expensesTableActions}>
       {!activeForm ? (
@@ -25,7 +31,12 @@ const ExpensesTable = ({ data, toggleShowForm, activeForm }) => (
         </tr>
       </thead>
       <tbody>
-        {activeForm && <ExpensesForm />}
+        {activeForm && (
+          <ExpensesForm
+            updateField={handleInputUpdate}
+            handleSubmit={handleSubmit}
+          />
+        )}
         {data &&
           data.map((item, index) => {
             return <TableRow item={item} key={index} />

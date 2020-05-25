@@ -2,7 +2,7 @@ type Expense {
   topic: String!
   value: Float!
   type: String!
-  date: Date!
+  date: String!
 }
 type Query {
   allExpenses: [Expense!]!
