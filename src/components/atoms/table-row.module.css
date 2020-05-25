@@ -1,0 +1,8 @@
+tr {
+  width: 100%;
+}
+tr td {
+  padding: 5px;
+  width: 20%;
+  background-color: var(--main-body-color);
+}

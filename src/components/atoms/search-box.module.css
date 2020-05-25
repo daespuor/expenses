@@ -1,0 +1,37 @@
+@import "../../assets/colors.css";
+.search-box {
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.search-box svg {
+  width: 100% !important;
+  font-size: 1rem;
+  padding: 5px;
+  border: 1px solid var(--main-strong-color);
+  border-radius: 5px 0px 0px 5px;
+  margin: 0;
+  grid-column: 1/2;
+  cursor: pointer;
+}
+
+.search-box input {
+  border: 1px solid var(--main-strong-color);
+  box-shadow: none;
+  border-radius: 0px 5px 5px 0px;
+  padding: 5px;
+  grid-column: 2 / 3;
+}
+
+@media screen and (min-width: 500px) {
+  .search-box {
+    grid-template-columns: 20% 80%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .search-box {
+    grid-template-columns: 15% 85%;
+  }
+}

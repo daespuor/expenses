@@ -6,7 +6,8 @@ query{
           _id,
           topic,
           type,
-          date
+          date,
+          value
         }
     }
   }
@@ -23,6 +24,6 @@ exports.handler = async () => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(data),
+    body: JSON.stringify({ expenses: data.allExpenses.data }),
   }
 }

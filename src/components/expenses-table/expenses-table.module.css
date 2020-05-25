@@ -1,0 +1,54 @@
+@import "../../assets/colors.css";
+tr {
+  width: 100%;
+  background-color: var(--main-strong-color);
+}
+tr th {
+  padding: 5px;
+  width: 20%;
+  color: var(--main-body-color);
+}
+.expenses-table {
+  width: 90%;
+  border: 0;
+  margin: 50px auto 10px;
+}
+
+table {
+  width: 100%;
+}
+
+.expenses-table-actions button {
+  padding: 10px;
+  background-color: var(--main-strong-color);
+  border: 1px solid var(--main-strong-color);
+  color: var(--main-body-color);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media screen and (min-width: 500px) {
+  .expenses-table-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+  }
+
+  .expenses-table-actions div {
+    grid-column: 3 / 4;
+  }
+  .expenses-table-actions button {
+    grid-column: 1 / 2;
+    width: 70%;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .expenses-table-actions button {
+    width: 30%;
+  }
+}
