@@ -1,4 +1,4 @@
-@import "../../assets/colors.css";
+@import "../assets/colors.css";
 tr {
   width: 100%;
   background-color: var(--main-strong-color);
@@ -11,22 +11,20 @@ tr th {
 .expenses-table {
   width: 90%;
   border: 0;
-  margin: 50px auto 10px;
+  margin: 20px auto 10px;
+}
+
+.expenses-table-more-button {
+  color: var(--main-body-color);
+  background-color: var(--main-strong-color);
+  font-size: 1.2rem;
+  padding: 10px 0px;
+  width: 100%;
+  text-align: center;
 }
 
 table {
   width: 100%;
-}
-
-.expenses-table-actions button {
-  padding: 10px;
-  background-color: var(--main-strong-color);
-  border: 1px solid var(--main-strong-color);
-  color: var(--main-body-color);
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  margin: 0;
 }
 
 @media screen and (min-width: 500px) {
@@ -42,13 +40,5 @@ table {
   }
   .expenses-table-actions button {
     grid-column: 1 / 2;
-    width: 70%;
-    border-radius: 5px;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .expenses-table-actions button {
-    width: 30%;
   }
 }

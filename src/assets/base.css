@@ -1,0 +1,47 @@
+@import "./buttons.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0 !important;
+  font-family: "Robot", sans-serif;
+  background-color: var(--main-body-color);
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--main-input-border-color);
+  background-color: #fff;
+  background-clip: padding-box;
+  box-shadow: none;
+  color: var(--main-text-color);
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+label {
+  margin-bottom: 5px;
+}
+
+.custom-modal {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+}
+
+.close-button-modal {
+  display: none;
+}
+
+h2 {
+  color: var(--main-text-color);
+}

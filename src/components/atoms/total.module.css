@@ -1,0 +1,16 @@
+@import "../../assets/colors.css";
+.total {
+  font-size: 3em;
+  color: var(--main-strong-color);
+  font-weight: 900;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.total-debts {
+  color: var(--main-error-color);
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 10px;
+}

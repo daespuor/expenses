@@ -1,14 +1,13 @@
 import React from "react"
-import "./table-row.module.css"
+import styles from "./table-row.module.css"
 const TableRow = ({ item }) => {
   const { topic, type, value, date } = item
+  const isAdd = type === "add"
   return (
-    <tr>
-      <td>{topic}</td>
+    <tr className={isAdd ? styles.add : styles.remove}>
       <td>{value}</td>
-      <td>{type}</td>
+      <td>{topic}</td>
       <td>{date}</td>
-      <td></td>
     </tr>
   )
 }

@@ -1,0 +1,5 @@
+Query(Lambda("_", Count(Documents(Collection("Expense")))))
+
+Query(Lambda(["size"], Select("data", Map(Paginate(Match(Index("expenses_sort_by_date_desc"), []), Var("size")), Lambda(["extra", "ref"], Get(Var("ref")))))))
+
+Query(Lambda(["size", "filter"], Filter(Select("data", Map(Paginate(Match(Index("expenses_sort_by_date_desc"), []), Var("size")), Lambda(["extra", "ref"], Get(Var("ref"))))), Lambda("x", Or(Containsstr(Select(["data", "topic"], Var("x")), Var("filter")), Containsstr(Select(["data", "type"], Var("x")), Var("filter")), Containsstr(ToString(Select(["data", "value"], Var("x"))), Var("filter")), Containsstr(ToString(Select(["data", "date"], Var("x"))), Var("filter")))))))

@@ -1,10 +1,11 @@
 @import "../assets/colors.css";
-
+header {
+  background-color: var(--main-strong-color);
+}
 header nav ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  background-color: var(--main-strong-color);
   margin: 0;
   padding: 15px;
 }
@@ -14,17 +15,17 @@ a {
   color: var(--main-body-color);
   cursor: pointer;
 }
-li {
+header nav ul li {
   margin-top: 10px;
   list-style: none;
 }
 
-li:nth-child(odd) {
+header nav ul li:nth-child(odd) {
   float: right;
   grid-row: auto;
   grid-column: 1 / 2;
 }
-li:nth-child(even) {
+header nav ul li:nth-child(even) {
   float: left;
   grid-row: auto;
   grid-column: 2 / 3;
@@ -35,19 +36,21 @@ li:nth-child(even) {
     grid-template-columns: auto;
     grid-template-rows: 1fr;
   }
-  li:nth-child(odd),
-  li:nth-child(even) {
+  header nav ul li:nth-child(odd),
+  header nav ul li:nth-child(even) {
     float: none;
     grid-row: 1 / 2;
     grid-column: auto;
   }
 }
 @media screen and (min-width: 700px) {
-  header nav ul {
-    display: inline-block;
+  header {
     width: 100%;
   }
-  li {
+  header nav ul {
+    display: inline-block;
+  }
+  header nav ul li {
     display: inline-block;
     width: auto;
     margin-left: 15px;

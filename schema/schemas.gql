@@ -2,8 +2,13 @@ type Expense {
   topic: String!
   value: Float!
   type: String!
-  date: String!
+  date: Date!
 }
+
 type Query {
   allExpenses: [Expense!]!
+  allExpensesOrderedByDate(size: Int!, filter: String): [Expense!]!
+    @resolver(name: "all_expenses_by_date")
+  countExpenses: Int! @resolver(name: "count_expenses")
+  getTotal: Float! @resolver(name: "get_total")
 }

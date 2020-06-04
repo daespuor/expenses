@@ -1,0 +1,29 @@
+@import "../assets/colors.css";
+.expenses-form {
+  margin-top: 20px;
+}
+
+.expenses-form .form-controler {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  text-align: left;
+  margin-top: 10px;
+}
+.expenses-form-actions button {
+  margin: 20px auto 0px;
+}
+
+@media screen and (min-width: 700px) {
+  .expenses-form .form-controler {
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+    text-align: left;
+    margin-top: 10px;
+  }
+  .expenses-form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}

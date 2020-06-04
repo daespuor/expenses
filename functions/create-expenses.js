@@ -1,6 +1,6 @@
 const sendQuery = require("./utils/send-query")
 const CREATE_EXPENSES = `
-mutation($topic: String!, $type:String!, $value: Float!, $date: String!){
+mutation($topic: String!, $type:String!, $value: Float!, $date: Date!){
     createExpense(data:{topic:$topic,value:$value,type:$type,date:$date}){
       _id,
       topic,
@@ -30,7 +30,7 @@ exports.handler = async event => {
     topic,
     type,
     value: parseFloat(value),
-    date: `${day}/${month}/${year}`,
+    date: `${year}-${month}-${day}`,
   })
 
   if (errors) {

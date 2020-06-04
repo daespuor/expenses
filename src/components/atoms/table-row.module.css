@@ -1,8 +1,20 @@
+@import "../../assets/colors.css";
 tr {
   width: 100%;
 }
 tr td {
   padding: 5px;
   width: 20%;
+  font-size: 1.5rem;
   background-color: var(--main-body-color);
+}
+.add {
+  color: var(--main-success-color);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.remove {
+  color: var(--main-error-color);
+  margin-left: 10px;
+  margin-right: 10px;
 }

@@ -3,7 +3,7 @@ import "./header.module.css"
 import { Link } from "gatsby"
 
 const Header = () => (
-  <header>
+  <header className="header">
     <nav>
       <ul>
         <li>
