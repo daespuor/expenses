@@ -1,0 +1,15 @@
+{
+    "name": "Expenses project",
+    "dockerFile":"Dockerfile",
+    "appPort": [8000, 8888],
+    "runArgs":["-u","node"],
+    "settings":{
+        "workbench.colorTheme": "Default Dark+",
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "yarn install",
+    "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+    ]
+}

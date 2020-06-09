@@ -1,16 +1,19 @@
-FROM node:alpine3.10
+FROM node:latest
 
-RUN npm i -g netlify-cli
+RUN npm install -g netlify-cli
+
+RUN mkdir /home/node/code
+
+RUN chmod -R 777 /home/node/code
 
 USER node
 
-RUN mkdir /node/src
-WORKDIR /node/src
+WORKDIR /home/node/code
 
 COPY --chown=node:node package.json yarn.lock ./
 
-RUN npm ci
+RUN yarn install --frozen-lockfile
 
 COPY --chown=node:node . .
 
-CMD ["netlify dev"]
+CMD ["netlify","dev"]
